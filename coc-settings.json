@@ -1,0 +1,28 @@
+{
+  "latex.lint.onChange": true,
+  "latex.build.executable": "latexmk",
+  "latex.build.onSave": true,
+  "rust.use_crate_blacklist": false,
+  "latex.build.args": [
+  	"-pv",
+  	"-pdf",
+    "-lualatex",
+  	"-interaction=nonstopmode",
+  	"-synctex=1"
+  ],
+  "latex.forwardSearch.executable": "zathura",
+  "latex.forwardSearch.args": ["--synctex-forward", "%l:1:%f", "%p"],
+  "languageserver": {
+    "clangd": {
+      "command": "clangd",
+      "filetypes": ["c", "cpp"],
+      "rootPatterns": ["compile_flags.txt", "compile_commands.json", ".vim/", ".git/", ".hg/"]
+    },
+    "bash": {
+      "command": "/usr/bin/bash-language-server",
+      "args": ["start"],
+      "ignoredRootPaths": ["~"],
+      "filetypes": ["sh", "bash" ]
+    }
+  }
+}
