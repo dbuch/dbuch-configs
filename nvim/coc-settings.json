@@ -2,7 +2,6 @@
   "latex.lint.onChange": true,
   "latex.build.executable": "latexmk",
   "latex.build.onSave": true,
-  "rust.use_crate_blacklist": false,
   "latex.build.args": [
   	"-pv",
   	"-pdf",
@@ -10,8 +9,6 @@
   	"-interaction=nonstopmode",
   	"-synctex=1"
   ],
-  "latex.forwardSearch.executable": "zathura",
-  "latex.forwardSearch.args": ["--synctex-forward", "%l:1:%f", "%p"],
   "languageserver": {
     "clangd": {
       "command": "clangd",
@@ -24,5 +21,6 @@
       "ignoredRootPaths": ["~"],
       "filetypes": ["sh", "bash" ]
     }
-  }
+  },
+  "git.enableGutters": true
 }
